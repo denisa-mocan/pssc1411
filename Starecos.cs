@@ -12,10 +12,48 @@ namespace PSSC_S3
     {
         public interface IStarecos { }
 
-        public record NevalidatStareCos(Client client, List<Produs> Produse):IStarecos;
-        public record GolStareCos(Client client, List<Produs> Produse):IStarecos;
-        public record ValidatStareCos(Client client, List<Produs> Produse):IStarecos;
-        public record PlatitStareCos(Client client, List<Produs> Produse, DateTime TimpulPlata):IStarecos;
+    public record NevalidatStareCos:IStarecos
+    {
+        public NevalidatStareCos(Client client, List<Produs> produse)
+        {
+            Client = client;
+            Produse = produse;
+
+        }
+        public Client Client; 
+        public List<Produs> Produse; 
+    }
+    public record GolStareCos:IStarecos
+    {
+         GolStareCos(Client client, List<Produs> produse)
+        {
+                Client = client;
+                Produse = produse;
+
+        }
+        public Client Client;
+        public List<Produs> Produse; 
+    }
+    public record ValidatStareCos:IStarecos
+    {
+        public ValidatStareCos(Client client, List<Produs> produse)
+        {
+            Client = client;
+            Produse = produse;
+        }
+        public Client Client {get; }
+        public List<Produs> Produse{get; }
+        }
+        public record PlatitStareCos:IStarecos
+        {
+            PlatitStareCos(Client client, List<Produs> produse, DateTime TimpulPlata)
+            {
+                Client = client;
+                Produse = produse;
+            }
+            public Client Client;
+            public List<Produs> Produse; 
+        }
 
 
        // public record UnvalidatedExamGrades(IReadOnlyCollection<UnvalidatedStudentGrade> GradesList) : IExamGrades;
