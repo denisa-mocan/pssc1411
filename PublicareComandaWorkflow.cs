@@ -16,11 +16,8 @@ namespace PSSC_S3
         return comanda.Match(
                 whenNevalidatStareCos: unvalidatedComanda => new ComandaPublicareFailEvent("Stare invalida") as IPublicareComandaEvent,
                 whenGolStareCos: golComanda => new ComandaPublicareFailEvent("Cosul este gol"),
-                whenValidatStareCos:  validatResult => new ComandaPublicareSucceedEvent()
-        
-                  //  whenValidatedExamGrades: validatedGrades => new ExamGradesPublishFaildEvent("Unexpected validated state"),
-                  //  whenCalculatedExamGrades: calculatedGrades => new ExamGradesPublishFaildEvent("Unexpected calculated state"),
-                   // whenPublishedExamGrades: publishedGrades => new ExamGradesPublishScucceededEvent(publishedGrades.Csv, publishedGrades.PublishedDate)
+                whenValidatStareCos:  validatResult => new ComandaPublicareFailEvent("Cosul nu a fost publicat"), 
+                whenPublicatStareCos: publicatCos => new ComandaPublicareSucceedEvent(publicatCos.Csv, publicatCos.PublishedDate)
                 );
 
 

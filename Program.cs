@@ -22,17 +22,17 @@ namespace PSSC_S3
             var result = workflow.Execute(command, (var)=> true);
 
             result.Match(
-                    // whenExamGradesPublishFaildEvent: @event =>
-                    // {
-                    //     Console.WriteLine($"Publish failed: {@event.Reason}");
-                    //     return @event;
-                    // },
-                    // whenExamGradesPublishScucceededEvent: @event =>
-                    // {
-                    //     Console.WriteLine($"Publish succeeded.");
-                    //     Console.WriteLine(@event.Csv);
-                    //     return @event;
-                    // }
+                    whenComandaPublicareFailEvent: @event =>
+                    {
+                        Console.WriteLine($"Publish failed: {@event.Reason}");
+                        return @event;
+                    },
+                    whenComandaPublicareSucceedEvent: @event =>
+                    {
+                        Console.WriteLine($"Publish succeeded.");
+                        Console.WriteLine(@event.Csv);
+                        return @event;
+                    }
                 );
 
             Console.WriteLine("Hello World!");
