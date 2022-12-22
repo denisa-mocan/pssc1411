@@ -36,44 +36,8 @@ namespace PSSC_S3
                 );
 
             Console.WriteLine("Hello World!");
-        //     Console.WriteLine("Hello, World!");
+   
 
-       
-        //     Console.WriteLine(produs1);
-        //     Console.WriteLine(produs2);
-        //     Console.WriteLine(produs3);
-        //    
-        //     
-        //     //CosNevalidat cos1 = new CosNevalidat(client1, Produse);
-        //     NevalidatStareCos comandanevalidata1 = new (client1, Produse);
-
-        //    // IStarecos result = IdentificareGol(comanda1);
-        //     IStarecos result = ValidareStareCos(comandanevalidata1);
-
-        //     result.Match(
-        //         whenNevalidatStareCos: unvalidatedResult => comandanevalidata1,
-        //         whenGolStareCos: golResult => golResult,
-        //         whenPlatitStareCos: platitResult => platitResult,
-        //         whenValidatStareCos: validatResult => PlataComenzii(validatResult)
-        //     );
-            //Console.WriteLine(comandanevalidata1.client.nume);
-
-           // Console.WriteLine(cos1.Produse);
-           // Console.WriteLine(cos1.Client);
-            // produs1.adresa="jskdhfk";
         }
-
-        // private static IStarecos IdentificareGol(NevalidatStareCos comanda)=> 
-        //    comanda.Produse.Count==0? 
-        //     new GolStareCos(new Client(), new List<Produs>())
-        //     : new ValidatStareCos(new Client("Iulia", "Jubea", "1234"), new List<Produs>());
-
-        // private static IStarecos ValidareStareCos(NevalidatStareCos comandanevalidata)=> 
-        // new ValidatStareCos(new Client("Iulia", "Jubea", "1234"), new List<Produs>());
-
-        // private static IStarecos PlataComenzii(ValidatStareCos comandavalidata)=> 
-        // new PlatitStareCos(new Client("Iulia", "Jubea", "1234"), new List<Produs>(), DateTime.Now);
-
-       // private static IStarecos ValidareStareCos(NevalidatStareCos cos)=> 
     }
 }

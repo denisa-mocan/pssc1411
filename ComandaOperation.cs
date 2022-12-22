@@ -27,6 +27,9 @@ namespace PSSC_S3
              whenValidatStareCos: validatCos =>
              {
                 StringBuilder csv = new();
+                validatCos.Produse.Aggregate(csv, (export,grade) => export.AppendLine($"{grade.cod}, {grade.cantitate}, {grade.adresa}"));
+
+
                 PublicatStareCos comandaPublicata = new(validatCos.Client, validatCos.Produse ,csv.ToString(), DateTime.Now);
 
                 return comandaPublicata;
