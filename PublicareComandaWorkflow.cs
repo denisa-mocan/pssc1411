@@ -10,16 +10,12 @@ namespace PSSC_S3
        public IPublicareComandaEvent Execute(PublicareComandaCommand command, Func<int, bool> checkProdusExists)
        {
          NevalidatStareCos comandanevalidata1 = new (command.InputClient, command.InputProduse);
-
-           // IStarecos result = IdentificareGol(comanda1);
         IStarecos comanda = ValidareComanda(checkProdusExists, comandanevalidata1);
-        comanda = CalcularePretFinal(comanda);
         comanda = PublicareComanda(comanda);
 
         return comanda.Match(
                 whenNevalidatStareCos: unvalidatedComanda => new ComandaPublicareFailEvent("Stare invalida") as IPublicareComandaEvent,
                 whenGolStareCos: golComanda => new ComandaPublicareFailEvent("Cosul este gol"),
-              //  whenValidatStareCos: validatComanda => new ComandaPublicareFailEvent("Cos neplatit"),
                 whenValidatStareCos:  validatResult => new ComandaPublicareSucceedEvent()
         
                   //  whenValidatedExamGrades: validatedGrades => new ExamGradesPublishFaildEvent("Unexpected validated state"),

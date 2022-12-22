@@ -44,24 +44,35 @@ namespace PSSC_S3
         public Client Client {get; }
         public List<Produs> Produse{get; }
         }
-        public record PlatitStareCos:IStarecos
+    // public record PlatitStareCos:IStarecos
+    //     {
+    //         PlatitStareCos(Client client, List<Produs> produse, DateTime TimpulPlata)
+    //         {
+    //             Client = client;
+    //             Produse = produse;
+    //         }
+    //         public Client Client;
+    //         public List<Produs> Produse; 
+    //     }
+
+     public record PublicatStareCos:IStarecos
+    {
+        public PublicatStareCos(Client client, List<Produs> produse, string csv, DateTime publishedDate)
         {
-            PlatitStareCos(Client client, List<Produs> produse, DateTime TimpulPlata)
-            {
-                Client = client;
-                Produse = produse;
-            }
-            public Client Client;
-            public List<Produs> Produse; 
+            Client = client;
+            Produse = produse;
+            PublishedDate = publishedDate;
+            Csv = csv;
+        }
+        public Client Client {get; }
+        public List<Produs> Produse{get; }
+
+        public DateTime PublishedDate { get; }
+            public string Csv { get; }
         }
 
+      
 
-       // public record UnvalidatedExamGrades(IReadOnlyCollection<UnvalidatedStudentGrade> GradesList) : IExamGrades;
-
-       // public record InvalidatedExamGrades(IReadOnlyCollection<UnvalidatedStudentGrade> GradesList, string reason) : IExamGrades;
-
-       // public record ValidatedExamGrades(IReadOnlyCollection<ValidatedStudentGrade> GradesList) : IExamGrades;
-
-       // public record PublishedExamGrades(IReadOnlyCollection<ValidatedStudentGrade> GradesList, DateTime PublishedDate) : IExamGrades;
+     
     }
 }
