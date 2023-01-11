@@ -9,6 +9,8 @@
 
   <ItemGroup>
     <PackageReference Include="CSharp.Choices" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
 </Project>

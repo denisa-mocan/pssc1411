@@ -25,7 +25,7 @@ namespace PSSC_S3
     }
     public record GolStareCos:IStarecos
     {
-         GolStareCos(Client client, List<Produs> produse)
+         public GolStareCos(Client client, List<Produs> produse)
         {
                 Client = client;
                 Produse = produse;

@@ -90,3 +90,16 @@ C:\Users\jubea\Desktop\PSSC_main\pssc1411\obj\Debug\net6.0\refint\PSSC_S3.dll
 C:\Users\jubea\Desktop\PSSC_main\pssc1411\obj\Debug\net6.0\PSSC_S3.pdb
 C:\Users\jubea\Desktop\PSSC_main\pssc1411\obj\Debug\net6.0\PSSC_S3.genruntimeconfig.cache
 C:\Users\jubea\Desktop\PSSC_main\pssc1411\obj\Debug\net6.0\ref\PSSC_S3.dll
+C:\Users\jubea\Desktop\PSSC_main\pssc1411\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\jubea\Desktop\PSSC_main\pssc1411\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\jubea\Desktop\PSSC_main\pssc1411\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\jubea\Desktop\PSSC_main\pssc1411\bin\Debug\net6.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\jubea\Desktop\PSSC_main\pssc1411\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\jubea\Desktop\PSSC_main\pssc1411\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\jubea\Desktop\PSSC_main\pssc1411\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\jubea\Desktop\PSSC_main\pssc1411\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\jubea\Desktop\PSSC_main\pssc1411\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\jubea\Desktop\PSSC_main\pssc1411\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\jubea\Desktop\PSSC_main\pssc1411\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\jubea\Desktop\PSSC_main\pssc1411\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\jubea\Desktop\PSSC_main\pssc1411\bin\Debug\net6.0\System.Security.Permissions.dll

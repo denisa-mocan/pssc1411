@@ -9,9 +9,11 @@ namespace PSSC_S3
     {
        public IPublicareComandaEvent Execute(PublicareComandaCommand command, Func<int, bool> checkProdusExists)
        {
-         NevalidatStareCos comandanevalidata1 = new (command.InputClient, command.InputProduse);
+        NevalidatStareCos comandanevalidata1 = new (command.InputClient, command.InputProduse);
         IStarecos comanda = ValidareComanda(checkProdusExists, comandanevalidata1);
         comanda = PublicareComanda(comanda);
+
+
 
         return comanda.Match(
                 whenNevalidatStareCos: unvalidatedComanda => new ComandaPublicareFailEvent("Stare invalida") as IPublicareComandaEvent,

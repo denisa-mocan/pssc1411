@@ -5,6 +5,7 @@ using static PSSC_S3.Cantitate;
 
 namespace PSSC_S3
 {
+
     public class Program{
         static void Main(string[] args)
         {
@@ -14,6 +15,7 @@ namespace PSSC_S3
             Client client1 = new Client("Iulia", "Jubea", "1234");
             List<Produs> Produse=new List<Produs>();
             Produse.Add(produs1);
+            Produse.Add(produs2);
 
 
             PublicareComandaCommand command = new (client1, Produse);
@@ -35,7 +37,7 @@ namespace PSSC_S3
                     }
                 );
 
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Final de program!");
    
 
         }

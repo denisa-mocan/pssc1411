@@ -9,15 +9,24 @@ namespace PSSC_S3
 {
     public static class ComandaOperation
     {
+        
         public static IStarecos ValidareComanda(Func<int, bool> checkProdusExists, NevalidatStareCos comanda)
         {
+            int produse=0;
             List<Produs> produse1 = new();
            foreach(var Produs in comanda.Produse)
            {
             produse1.Add(Produs);
+            produse++;
 
            }
-          return new ValidatStareCos(comanda.Client, produse1);
+           if (produse<=0){
+           return new GolStareCos(comanda.Client, produse1);
+           }
+           else if (comanda.Client==null){ 
+           return new NevalidatStareCos(comanda.Client, produse1);
+           }
+           else return new ValidatStareCos(comanda.Client, produse1);
         }
 
         public static IStarecos PublicareComanda(IStarecos comanda) => comanda.Match(
